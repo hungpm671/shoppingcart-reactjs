@@ -1,0 +1,65 @@
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 300px !important;
+  height: 300px !important;
+  background-color: #fff !important;
+  margin: auto;
+  padding: 20px;
+  transform: translate(0, -50%);
+  animation: slideToTop 0.3s ease-out;
+  transform: animetion 0.3s ease-out;
+}
+
+.modal-content.closing {
+  animation: slideToBottom 0.3s ease-out;
+}
+
+@keyframes slideToTop {
+  from {
+    transform: translate(0, -80%);
+  }
+  to {
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes slideToBottom {
+  from {
+    transform: translate(0, -50%);
+  }
+  to {
+    transform: translate(0, -80%);
+  }
+}
+
+.offcanva-content {
+  background: #fff;
+  padding: 20px;
+  animation: slideToLeft 0.3s ease-out;
+  transform: translate(0, 0);
+}
+
+.offcanva-content.closing {
+  animation: slideToRight 0.3s ease-out;
+}
+
+@keyframes slideToLeft {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
+}
